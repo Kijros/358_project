@@ -5,6 +5,9 @@
     padding: 8px 20px; /* 8px down and 20 to the right */
     position: fixed; /* Keeps the header visible when scrolling */
     width: 100%;   /*elements stretch to cover 100% of the x axis of page */
+    z-index: 7; /* so it doesnt overlap with main box  */
+    top: 0;
+    border-bottom: 1px solid;
 }
 
 #userIcon {
