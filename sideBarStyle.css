@@ -7,8 +7,8 @@ aside{
   padding: 0;
   width: 200px;
   position: fixed;
-  height: calc(100% - 20px);
-  top: 20px;
+  height: calc(100% - 60px);
+  top: 60px;
   border-radius: 3px;
   border: 1px solid black;
   display: flex;
