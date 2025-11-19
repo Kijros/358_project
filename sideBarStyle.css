@@ -1,0 +1,44 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+aside{
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  position: fixed;
+  height: calc(100% - 20px);
+  top: 20px;
+  border-radius: 3px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+aside a{
+  text-align: center;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  justify-self:start;
+}
+
+aside button{
+  background-color: #007BFF; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px;
+
+}
+
+.button-container {
+  margin-top: 40rem;
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+  align-items: center;
+}
