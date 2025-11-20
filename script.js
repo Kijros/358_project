@@ -1,37 +1,60 @@
 // The arrays that all the posts are saved in
-mainContetnArr = [];
 
 // the functionlaty of the user post button
-function userPosts(){
+function userPosts() {
     mainDiv = document.getElementById('main-content-div');
-    postBtn = document.getElementById("postBtn");
-    postBtn.addEventListener('click', function(){
-        // create a div for the form
-        postDiv = document.createElement('div');
-        postDiv.classList.add("postFormDiv");
+    
+    existingPosts = Array.from(mainDiv.children);
+    
+    mainDiv.innerHTML = '';
 
-        postForm = document.createElement('form');
+    postForm = document.createElement('form');
+    postForm.id = 'postForm';
 
-        title = document.createElement('input');
-        title.type = 'text';
-        title.placeholder = "Title";
+    titleInput = document.createElement('input');
+    titleInput.type = 'text';
+    titleInput.placeholder = 'Enter a title';
+    titleInput.id = 'postTitle';
+    titleInput.required = true;
 
-        bodyText = document.createElement('input');
-        bodyText.type = 'text';
-        bodyText.placeholder = "Body Text";
+    paragraphInput = document.createElement('textarea');
+    paragraphInput.placeholder = 'Enter your paragraph';
+    paragraphInput.id = 'postParagraph';
+    paragraphInput.required = true;
 
-        // make the user able to add an image here 
+    submitButton = document.createElement('button');
+    submitButton.type = 'submit';
+    submitButton.textContent = 'Submit';
 
+    postForm.appendChild(titleInput);
+    postForm.appendChild(paragraphInput);
+    postForm.appendChild(submitButton);
 
+    mainDiv.appendChild(postForm);
 
+    postForm.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    })
+        title = document.getElementById('postTitle').value;
+        paragraph = document.getElementById('postParagraph').value;
 
+        newPost = document.createElement('div');
+        newPost.classList.add('posts');
+
+        postTitle = document.createElement('h1');
+        postTitle.textContent = title;
+
+        postParagraph = document.createElement('p');
+        postParagraph.textContent = paragraph;
+
+        newPost.appendChild(postTitle);
+        newPost.appendChild(postParagraph);
+
+        mainDiv.innerHTML = '';
+        
+        existingPosts.forEach(post => mainDiv.appendChild(post));
+        
+        mainDiv.appendChild(newPost);
+    });
 }
 
-// if there is any bug probaly from this function check later *********************
-function replaceCurrentDivContent(newDiv){
-    currentDiv = document.getElementById("main-content-div");
-    currentDiv.innerHTML = "";
-    currentDiv.innerHTML = newDiv.innerHTML
-}
