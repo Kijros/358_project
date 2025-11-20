@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="sideBarStyle.css">
     <link rel="stylesheet" href="topBar.css">
+    <link rel="stylesheet" href="mainContentStyle.css">
     <link rel="stylesheet" href="mainAreaContainer.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,16 +17,24 @@
         <a href="#" id="CS">CS</a>
         <div class="button-container">
         <button id="settings">Settings</button>
-        <button id="post">Post</button>
+        <button id="postBtn" onclick="userPosts()">post</button>
         </div>
     </aside>
-       
+
+    <div id="main-content-div">
+
+
+    </div>
+
+
      <header id="mainHeader">
    <a href="profile.html" id="iconLink">    
+  <!--a link is empty si we might add somthing later-->
+      <a href="" id="iconLink">    
       <img 
        src="assets/defultPFP.jpg" 
        alt="this is user icon space" 
-      id="userIcon">
+       id="userIcon">
         </a>
     <div>
     <input type="search" placeholder="search here...." id="searchBar">
@@ -47,5 +56,6 @@
         </div>
     </div>
     <script src="pages.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
