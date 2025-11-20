@@ -7,7 +7,15 @@
     width: 100%;   /*elements stretch to cover 100% of the x axis of page */
     z-index: 7; /* so it doesnt overlap with main box  */
     top: 0;
-    border-bottom: 1px solid;
+}
+
+/* Keep page content clear of the fixed header */
+:root {
+    --header-clearance: 64px;
+}
+
+body {
+    padding-top: var(--header-clearance);
 }
 
 #userIcon {
