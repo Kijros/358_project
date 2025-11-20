@@ -1,0 +1,18 @@
+#main-content-div{
+    width: 800px;
+    display: flex;
+    border: solid black;
+    position: absolute;
+    top: 10rem;
+    left: 33rem;
+    height: 70%;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+
+}
+
+.posts{
+
+}
